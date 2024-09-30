@@ -18,8 +18,8 @@ const Projects = () => {
             I constructed an e-commerce website that lists clothing for a friend’s clothing brand. I used HTML, CSS, and JavaScript.
           </p>
           <div className="project-buttons">
-            <a href="https://github.com/link-to-unfazed" className="project-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://link-to-unfazed-website" className="project-button" target="_blank" rel="noopener noreferrer">Website</a>
+            <a href="https://github.com/alex-osorio10/unfazed-website.git" className="project-button" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://unfazed-website.netlify.app/" className="project-button" target="_blank" rel="noopener noreferrer">Website</a>
           </div>
         </div>
 
@@ -31,8 +31,8 @@ const Projects = () => {
             I developed a streaming service clone with user authentication and live movie data from TMDB. I used React and Firebase.
           </p>
           <div className="project-buttons">
-            <a href="https://github.com/link-to-osorio" className="project-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://link-to-osorio-website" className="project-button" target="_blank" rel="noopener noreferrer">Website</a>
+            <a href="https://github.com/alex-osorio10/streaming-clone.git" className="project-button" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://osorio-streaming-clone.netlify.app/" className="project-button" target="_blank" rel="noopener noreferrer">Website</a>
           </div>
         </div>
 
@@ -44,8 +44,8 @@ const Projects = () => {
             I developed an informative website for my Society of Hispanic Professional Engineers (SHPE) club. I used React, Node.js, JavaScript, HTML, and CSS.
           </p>
           <div className="project-buttons">
-            <a href="https://github.com/link-to-shpe" className="project-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://link-to-shpe-website" className="project-button" target="_blank" rel="noopener noreferrer">Website</a>
+            <a href="https://github.com/alex-osorio10/shpe_website.git" className="project-button" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://portland-state-shpe.netlify.app/" className="project-button" target="_blank" rel="noopener noreferrer">Website</a>
           </div>
         </div>
 
