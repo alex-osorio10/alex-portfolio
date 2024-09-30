@@ -1,0 +1,930 @@
+/* General body styling */
+* {
+  box-sizing: border-box;
+}
+
+/* Import Lexend-SemiBold font */
+@font-face {
+  font-family: 'Lexend';
+  src: url('./assets/fonts/Lexend-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Import ZenKakuGothicNew-Black font */
+@font-face {
+  font-family: 'ZenKaku';
+  src: url('./assets/fonts/ZenKakuGothicNew-Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Georgia', Arial, sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes the full viewport height */
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 90px; /* Ensure content is below the fixed header */
+  padding: 0;
+}
+
+/* HEADER COMPONENT */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  height: 90px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Align logo to left and menu to right */
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Make the logo clickable */
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #CA9A12;
+}
+
+/* For nav links, hide on small screens */
+.nav-links {
+  display: flex;
+  margin-left: auto; /* Push navigation links to the right */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-list li:hover {
+  color: #CA9A12;
+}
+
+/* Dropdown Menu Styles */
+.menu-icon {
+  color: white; /* Set the color of the menu icon to white */
+  font-size: 2rem; /* Adjust the size as needed */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.menu-icon:hover {
+  color: #CA9A12; /* Change the color on hover */
+}
+
+
+
+.dropdown-menu {
+  position: fixed; /* Dropdown is fixed to move with the page */
+  top: 90px; /* Positioned directly below the header */
+  right: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Ensure it stays on top of other elements */
+  width: 200px;
+}
+
+
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-item {
+  text-align: center;
+  cursor: pointer; /* Add cursor pointer for dropdown items */
+}
+
+.dropdown-item:hover {
+  background-color: #CA9A12;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 15px 20px;
+}
+
+.dropdown-item a:hover {
+  background-color: #6E8D23;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+/* Hide nav links on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .dropdown-menu {
+    right: 0;
+    width: 100%; /* Full width on mobile */
+  }
+
+  .dropdown-item {
+    padding: 15px 0;
+  }
+}
+
+/* Show nav links when screen is larger than 768px, hide dropdown */
+@media (min-width: 769px) {
+  .menu-button {
+    display: none; /* Hide menu button on larger screens */
+  }
+
+  .nav-links {
+    display: flex; /* Show nav links */
+  }
+
+  .dropdown-menu {
+    display: none; /* Hide dropdown menu */
+  }
+}
+
+
+
+/* BACKGROUNDIMAGE COMPONENT */
+.background-image-container {
+  background-repeat: no-repeat;
+  background-position: center -20px;
+  background-size: cover;
+  min-height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.left-content {
+  position: absolute;
+  left: 10%; /* Position closer to the original left spot */
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.name {
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: white;
+  margin: 10px 0;
+}
+
+.social-icons {
+  position: absolute;
+  left: 1%; /* Align social icons near the left edge */
+  top: 40%;
+  display: flex;
+  flex-direction: column; /* Stack the icons vertically */
+  gap: 20px; /* Space between icons */
+}
+
+.social-icon {
+  color: white;
+  font-size: 2rem; /* Adjust icon size as needed */
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #CA9A12; /* Change icon color on hover */
+}
+
+.headshot-image {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .left-content {
+    left: 5%; /* Adjust text position to the left */
+    top: 20%; /* Move text higher up for more room */
+  }
+
+  .name {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 1.2rem; /* Reduce subtitle size */
+  }
+
+  .social-icons {
+    left: 5%; /* Push icons closer to the text */
+    top: 60%; /* Lower icons on smaller screens */
+    gap: 15px; /* Reduce spacing between icons */
+  }
+
+  .social-icon {
+    font-size: 1.5rem; /* Make icons smaller on mobile */
+  }
+
+  .headshot-image {
+    width: 250px; /* Reduce size of the headshot */
+    right: 5%; /* Bring headshot closer to the center */
+    top: 60%; /* Adjust headshot vertical position */
+  }
+}
+
+@media (max-width: 480px) {
+  .left-content {
+    left: 3%; /* Move text closer to the edge */
+    top: 15%; /* Further adjust text position */
+  }
+
+  .name {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .subtitle {
+    font-size: 1rem; /* Further reduce subtitle size */
+  }
+
+  .social-icons {
+    left: 3%; /* Align social icons near the edge */
+    top: 65%; /* Further adjust icons */
+    gap: 10px; /* Reduce spacing between icons */
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Make icons even smaller */
+  }
+
+  .headshot-image {
+    width: 200px; /* Further reduce headshot size */
+    right: 3%; /* Bring headshot closer to center */
+    top: 65%; /* Adjust headshot position */
+  }
+}
+
+
+/* BACKGROUNDIMAGE COMPONENT END */
+
+
+
+
+
+
+
+
+
+
+/* SKILLS SECTION */
+.skills-section {
+  background-color: #202020;
+  padding: 40px 0; /* Reduce the top padding */
+  text-align: center;
+  width: 100vw;
+  font-family: 'Lexend', Georgia, serif; /* Apply Lexend with Georgia as fallback */
+}
+
+.skills-header {
+  font-family: 'Georgia', Arial, sans-serif; /* Use ZenKaku with Arial as fallback */
+  font-size: 4rem; /* Adjust the size */
+  color: #F2BF47; /* Use the specified color */
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 0 0 10px 0; /* Remove top margin, reduce bottom margin to 10px */
+}
+
+
+
+.skills-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+  font-family: 'Lexend', Georgia, serif; /* Apply Lexend */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for the skills section */
+  gap: 20px;
+  justify-items: center;
+}
+
+.skills-grid p {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 10px;
+  font-family: 'Lexend', Georgia, serif; /* Apply Lexend */
+}
+
+.skill-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.skill-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* SOFT SKILLS SECTION */
+.soft-skills-section {
+  background-color: #2f3d6e; /* Match the skills section */
+  padding: 50px 0;
+  text-align: center;
+  width: 100vw;
+  font-family: 'Lexend', Georgia, serif; /* Apply Lexend */
+}
+
+.soft-skills-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+  font-family: 'Lexend', Georgia, serif; /* Apply Lexend */
+}
+
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 skills per row */
+  gap: 20px;
+  justify-items: center;
+  margin-top: 40px; /* Add spacing between the two sections */
+}
+
+.soft-skills-grid p {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 10px;
+  font-family: 'Lexend', Georgia, serif; /* Apply Lexend */
+}
+
+/* Reuse the same hover effect for soft skills */
+.soft-skills-grid .skill-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* SKILLS COMPONENT END */
+
+/* EXPERIENCE SECTION */
+/* Main Title - EXPERIENCE */
+.experience-title {
+  font-family: 'Georgia', serif; /* Same as the SKILLS header */
+  font-size: 4rem; /* Match the size with SKILLS */
+  color: #CA9A12; /* Change this to green */
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 20px 0 10px 0; /* Add 20px top margin */
+}
+
+/* Subheading Titles for Work Experience and Education */
+.sub-title {
+  font-size: 1.8rem;
+  font-family: 'Lexend', sans-serif;
+  color: #fff;
+  text-decoration: underline;
+  margin-bottom: 10px; /* Reduce margin below the title */
+}
+
+
+/* Align Education title to the left */
+.education-title {
+  font-size: 1.8rem;
+  font-family: 'Lexend', sans-serif;
+  color: #fff;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.experience-section {
+  background-color: #000000;
+  color: #fff;
+  padding: 30px 0; /* Add padding to the top */
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center align */
+}
+
+/* Experience Container */
+.experience-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  width: 90%;
+  max-width: 1400px;
+  font-family: 'Times New Roman', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Left Side Experience Scrollbox - White Background */
+.experience-left-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-left {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 20px;
+  background-color: #fff;
+  color: #000;
+  padding: 15px; /* Reduce padding inside the box */
+  box-sizing: border-box;
+  margin-top: 10px; /* Reduce margin above the box */
+  max-width: 600px;
+}
+
+.experience-entry {
+  margin-bottom: 8px; /* Reduce space between experience entries */
+}
+
+.experience-entry p {
+  margin-bottom: 3px; /* Reduce the space between paragraphs */
+  font-size: 1.1rem; /* Increase paragraph text size */
+  line-height: 1.2; /* Reduce line spacing */
+}
+
+.experience-entry h3 {
+  font-weight: bold;
+  color: #000; /* Default color for the job title */
+  font-size: 1.3rem; /* Increase title text size */
+  line-height: 1.0; /* Reduce line spacing */
+}
+
+.experience-entry h3 strong {
+  color: #CA9A12; /* Set the company name to #CA9A12 */
+}
+
+/* Right Side Logos and Education Information */
+.experience-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Georgia', serif; /* Change to Georgia for consistency */
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.graduation-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  font-family: 'Georgia', serif; /* Change to Georgia for consistency */
+}
+
+/* Education and Graduation Information */
+.graduation-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.college-name-major {
+  flex: 1;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.graduation-date {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
+}
+
+/* Logo Styles */
+.experience-logo {
+  width: 150px;
+  height: auto;
+  margin-left: 20px;
+  object-fit: contain;
+}
+
+/* Subheading Titles for Work Experience and Education */
+.sub-title, .education-title {
+  font-family: 'Georgia', serif; /* Set font to Georgia */
+  font-size: 1.8rem; /* Adjust size */
+  color: #CA9A12; /* Set color to CA9A12 */
+  text-decoration: underline;
+  margin-bottom: 10px; /* Keep the reduced margin */
+}
+
+
+/* Ensure both sides stay within the container */
+@media (max-width: 768px) {
+  .experience-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .experience-left,
+  .experience-right {
+    flex: 1 1 100%;
+    position: relative;
+    margin: 20px 0;
+  }
+}
+
+/* EXPERIENCE SECTION END */
+
+
+
+
+
+
+
+
+
+
+/* SHPE COMPONENT */
+/* SHPE Section Styling */
+.shpe-section {
+  background-color: #ffffff; /* White background */
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* SHPE Title Styling */
+.main-title {
+  font-family: 'Georgia', serif; /* Georgia font */
+  font-size: 4rem; /* Same size as Experience title */
+  color: #000000; /* Same color as other titles */
+  text-decoration: underline; /* Underline title */
+  margin-bottom: 40px;
+}
+
+/* Card Styling for Horizontal Layout */
+.shpe-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  background-color: #ffffff; /* Card background */
+  border: 4px solid black; /* Solid border */
+  margin-bottom: 40px; /* Spacing between cards */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Text Area Styling */
+.shpe-text {
+  width: 50%;
+  padding: 20px;
+}
+
+.shpe-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.shpe-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Image Styling */
+.shpe-image {
+  width: 50%;
+}
+
+.shpe-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px; /* Optional: Add some round corners to the image */
+}
+
+/* SHPE COMPONENT END */
+
+
+
+
+
+
+/* PROJECTS COMPONENT */
+/* Title Styling */
+.projects-title {
+  font-size: 3rem;
+  font-family: 'Georgia', serif; /* Ensure font style is correct */
+  color: #00ffee; /* Change the text color to black */
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* Project Card Styling */
+.project-card {
+  width: 100%; /* Full width */
+  max-width: 900px; /* Maximum width */
+  background-color: #ffffff; /* Card background white */
+  color: #000000; /* Text color black */
+  margin-bottom: 50px; /* Increased bottom margin to space the buttons */
+  border: 8px solid black; /* Solid black border */
+  border-radius: 0; /* Remove rounded corners */
+  padding-bottom: 20px; /* Added padding at the bottom to give space between buttons and border */
+}
+
+/* Project GIF Image */
+.project-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Project Title Styling */
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Project Description Styling */
+.project-description {
+  font-size: 1.2rem;
+  padding: 20px;
+  font-weight: bold; /* Bold text */
+  color: rgb(86, 86, 86);
+}
+
+/* Button Styling */
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add space between buttons */
+  margin-top: 20px; /* Margin to separate buttons from description */
+}
+
+/* PROJECTS COMPONENT */
+/* Title Styling */
+.projects-title {
+  font-size: 4rem;
+  font-family: 'Georgia', serif; /* Ensure font style is correct */
+  color: #000000; /* Set the text color to cyan */
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* Project Card Styling */
+.project-card {
+  width: 100%; /* Full width */
+  max-width: 900px; /* Maximum width */
+  background-color: #ffffff; /* Card background white */
+  color: #000000; /* Text color black */
+  margin-bottom: 50px; /* Increased bottom margin to space the buttons */
+  border: 8px solid black; /* Solid black border */
+  border-radius: 0; /* Remove rounded corners */
+  padding-bottom: 20px; /* Added padding at the bottom to give space between buttons and border */
+}
+
+/* Project GIF Image */
+.project-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Project Title Styling */
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Project Description Styling */
+.project-description {
+  font-size: 1.2rem;
+  padding: 20px;
+  font-weight: bold; /* Bold text */
+  color: rgb(86, 86, 86);
+}
+
+/* Button Styling */
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add space between buttons */
+  margin-top: 20px; /* Margin to separate buttons from description */
+}
+
+.project-button {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  font-family: 'Georgia', Arial, sans-serif; /* Use Zen font for button text */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #444; /* Darker hover effect */
+}
+
+.project-button:active {
+  transform: scale(0.95); /* Button click effect */
+}
+
+/* Add this to the individual project cards */
+.project-card .project-buttons {
+  margin-top: 15px;
+}
+
+/* PROJECTS COMPONENT END */
+
+
+
+
+
+/* FOOTER COMPONENT */
+footer {
+  background-color: #000000;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 20px 0;
+  margin-top: auto;
+  width: 100%;
+  box-shadow: 0 -4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer-container h2 {
+  text-align: center;
+  font-family: 'Georgia', Arial, sans-serif;
+  color: #CA9A12;
+  margin: 10px 0;
+}
+
+.footer-container p {
+  text-align: center;
+  font-family: 'Georgia', Arial, sans-serif;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.ideal-logic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none; /* Removed the border for the button as it's an image */
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-family: 'Georgia', Arial, sans-serif;
+}
+
+/* FOOTER COMPONENT END */
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .background-image-container {
+     background-position: center center;
+     min-height: 60vh;
+  }
+
+  .skills-grid {
+     grid-template-columns: repeat(2, 1fr); /* Display 2 skills per row */
+  }
+
+  .name {
+     font-size: 2rem;
+  }
+
+  .button {
+     padding: 8px 15px;
+  }
+}
+/* MEDIA QUERIES END */
