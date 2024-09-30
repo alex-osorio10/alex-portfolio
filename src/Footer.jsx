@@ -13,7 +13,7 @@ function Footer() {
         <h2>Contact</h2>
         <p>Feel free to reach out and send a message!</p>
         <a 
-          href="mailto:shpe@pdx.edu" 
+          href="mailto:alexosorio1219@gmail.com" 
           target="_blank" 
           rel="noopener noreferrer"
           className="ideal-logic-button"
@@ -24,13 +24,13 @@ function Footer() {
         {/* Follow Us Section */}
         <h2>Links</h2>
         <div className="social-media">
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/alex-osorio-trujillo/" target="_blank" rel="noopener noreferrer">
             <img src={linkedinLogoGold} alt="LinkedIn Logo" className="social-icon" />
           </a>
-          <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/alex-osorio10" target="_blank" rel="noopener noreferrer">
             <img src={githubLogoGold} alt="GitHub Logo" className="social-icon" />
           </a>
-          <a href="https://www.instagram.com/yourprofile/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/alex.osorio10/" target="_blank" rel="noopener noreferrer">
             <img src={instagramLogoGold} alt="Instagram Logo" className="social-icon" />
           </a>
         </div>
