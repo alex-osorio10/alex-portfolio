@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '/opt/build',  // Specify the output directory to align with Netlify's expected build path
+    outDir: 'dist',  // Specify the output directory to align with Netlify's expected build path
   },
 });
