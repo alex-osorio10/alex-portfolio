@@ -15,13 +15,13 @@ const BackgroundImage = () => {
         <p className="subtitle">Aspiring UI/UX Designer + Developer</p>
       </div>
       <div className="social-icons">
-        <a href="https://linkedin.com" className="social-icon" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/alex-osorio-trujillo/" className="social-icon" aria-label="LinkedIn">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
-        <a href="https://github.com" className="social-icon" aria-label="GitHub">
+        <a href="https://github.com/alex-osorio10" className="social-icon" aria-label="GitHub">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="https://instagram.com" className="social-icon" aria-label="Instagram">
+        <a href="https://www.instagram.com/alex.osorio10/" className="social-icon" aria-label="Instagram">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
       </div>
