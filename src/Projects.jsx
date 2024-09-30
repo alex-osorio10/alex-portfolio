@@ -10,7 +10,7 @@ const Projects = () => {
       <h1 className="projects-title">PROJECTS</h1>
       <div className="projects-container">
 
-        {/* Unfazed Project Card */}
+        {/* Unfazed Project Cards */}
         <div className="project-card">
           <img src={unfazedGif} alt="Unfazed Project GIF" className="project-gif" />
           <h3 className="project-title">Unfazed - Web Development</h3>
