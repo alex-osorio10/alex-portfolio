@@ -32,7 +32,7 @@ const Projects = () => {
           </p>
           <div className="project-buttons">
             <a href="https://github.com/alex-osorio10/streaming-clone.git" className="project-button" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://osorio-streaming-clone.netlify.app/" className="project-button" target="_blank" rel="noopener noreferrer">Website</a>
+            {/* <a href="https://osorio-streaming-clone.netlify.app/" className="project-button" target="_blank" rel="noopener noreferrer">Website</a> */}
           </div>
         </div>
 
