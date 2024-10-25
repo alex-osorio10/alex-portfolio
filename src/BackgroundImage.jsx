@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import backgroundImage from './assets/images/background_image.png'; // Background image
+import backgroundImage from './assets/images/background_image.webp'; // Background image
 import headshot from './assets/images/alex_headshot.png'; // Headshot image
 
 const BackgroundImage = () => {
