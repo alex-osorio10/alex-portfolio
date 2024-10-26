@@ -12,7 +12,7 @@ const BackgroundImage = () => {
     >
       <div className="left-content">
         <h1 className="name">Alex Osorio Trujillo</h1>
-        <p className="subtitle">Aspiring UI/UX Designer + Developer</p>
+        <p className="subtitle">Aspiring Web Developer</p>
       </div>
       <div className="social-icons">
         <a href="https://www.linkedin.com/in/alex-osorio-trujillo/" className="social-icon" aria-label="LinkedIn">
