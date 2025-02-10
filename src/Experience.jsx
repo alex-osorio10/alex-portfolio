@@ -18,6 +18,12 @@ function Experience() {
             </div>
 
             <div className="experience-entry">
+              <h3><strong>Best Buy</strong> - <i>Seasonal Retail Sales Associate</i> (Oct. 2024 - Jan. 2025)</h3>
+              <p>▪ Drove customer engagement and sales by promoting benefits of memberships, contributing to store growth.</p>
+              <p>▪ Handled cashier duties, order pickups, and kept the sales floor clean and organized.</p>
+            </div>
+
+            <div className="experience-entry">
               <h3><strong>IKEA</strong> - <i>Goods Flow Co-Worker</i> (Oct. 2021 - June 2024)</h3>
               <p>▪ Improved teamwork efficiency, contributing to an improved customer service experience.</p>
               <p>▪ Responsible for operating a delivery truck to facilitate seamless product deliveries.</p>
